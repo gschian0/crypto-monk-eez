@@ -1,28 +1,80 @@
 .App {
-  font-family: sans-serif;
+  flex : wrap;
   text-align: center;
+  background-color: red;
+  /* font-family: 'Open Sans', sans-serif; */
+  
 }
 
 body {
   margin: 1em;
   padding: 0;
-  font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
-  color: #244376;
+  color: #c1ae9f;
+  background-color: #d3bdb0;
+ 
+opacity: 1;
+background-image:  linear-gradient(30deg, #89937c 12%, transparent 12.5%, transparent 87%, #89937c 87.5%, #89937c), linear-gradient(150deg, #89937c 12%, transparent 12.5%, transparent 87%, #89937c 87.5%, #89937c), linear-gradient(30deg, #89937c 12%, transparent 12.5%, transparent 87%, #89937c 87.5%, #89937c), linear-gradient(150deg, #89937c 12%, transparent 12.5%, transparent 87%, #89937c 87.5%, #89937c), linear-gradient(60deg, #89937c77 25%, transparent 25.5%, transparent 75%, #89937c77 75%, #89937c77), linear-gradient(60deg, #89937c77 25%, transparent 25.5%, transparent 75%, #89937c77 75%, #89937c77);
+background-size: 80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+h1{
+  padding: 10px;
+  text-align :center;
+  font-size : 8vw;
+
+font-family: 'Press Start 2P', cursive;
+-webkit-text-stroke-width: 3px;
+
+  -webkit-text-stroke-color: #715b64;
+}
+
+.title-plate {
+  margin : auto;
+  border-radius : 100px;
+  max-width : 700px;
+  background: rgb(105,56,92);
+  background: linear-gradient(196deg, rgba(105,56,92,1) 0%, rgba(255,246,0,0.36318277310924374) 57%, rgba(193,174,159,1) 100%);
+    
+}
+
+.link {
+  
 }
 
 #card {
-  margin: 3em auto;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  border-radius: 6px;
+  flex-direction: row;
+  padding: 2px;
+ 
+  max-width: 500px;
+  max-height : 500px;
+  border-radius: 150px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  
 }
 
+
 model-viewer {
-  width: 100%;
+  border: 0;
+    text-decoration: none;
+    background: #CFD8DC;
+    font: 14px/1 sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+  position :relative;
+  margin: auto;
+  justify-content: center;
+
+  width: 75%;
+  margin-top : 5em;
+  margin-bottom : 5em;
   height: 400px;
-  background-color: #70bcd1;
+  background: rgb(255,0,0);
+background: linear-gradient(196deg, rgba(255,0,0,1) 0%, rgba(255,248,0,1) 51%, rgba(65,255,0,1) 100%);
   --poster-color: #ffffff00;
 }
