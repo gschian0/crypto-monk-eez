@@ -6,57 +6,56 @@ import PurchaseLink from "./Components/PurchaseLink";
 import ModelCard from "./Components/ModelCard";
 import SoldLink from "./Components/SoldLink";
 import axios from "axios";
-import Tabs from "./Components/Tabs.js";
-import Tab from "./Components/Tab.js";
 
 export default function App() {
   const [objkts, setObjkt] = useState([]);
   const [year, setYear] = useState(2021);
-  async function getTokenInfo(id) {
-    try {
-      const res = await axios.get(
-        "https://api.better-call.dev/v1/tokens/mainnet/metadata?token_id=" +
-          id.toString()
-      );
-      return res.data[0];
-    } catch (error) {
-      return null;
-    }
-  }
+
+  // async function getTokenInfo(id) {
+  //   try {
+  //     const res = await axios.get(
+  //       "https://api.better-call.dev/v1/tokens/mainnet/metadata?token_id=" +
+  //         id.toString()
+  //     );
+  //     return res.data[0];
+  //   } catch (error) {
+  //     return null;
+  //   }
+  // }
 
   // console.log(getTokenInfo(36899));
 
-  async function getObjkts(id) {
-    let queue = new Array();
-    if (typeof id == "object") {
-      id.forEach((element) => {
-        queue.push(getTokenInfo(element));
-      });
-      Promise.all(queue).then((values) => {
-        console.log(
-          values.forEach((value) => {
-            console.log(value);
-            return value.data;
-          })
-        );
-      });
-    } else {
-      queue.push(getTokenInfo(id));
-      Promise.all(queue).then((values) => {
-        console.log(values);
-        return values.data;
-      });
-    }
-  }
-  const names = [];
-  const MONKEEZ = getObjkts([
-    290697, 290884, 291061, 291147, 291195, 293472, 293684, 298212,301025
-  ]);
+  // async function getObjkts(id) {
+  //   let queue = new Array();
+  //   if (typeof id == "object") {
+  //     id.forEach((element) => {
+  //       queue.push(getTokenInfo(element));
+  //     });
+  //     Promise.all(queue).then((values) => {
+  //       console.log(
+  //         values.forEach((value) => {
+  //           console.log(value);
+  //           return value.data;
+  //         })
+  //       );
+  //     });
+  //   } else {
+  //     queue.push(getTokenInfo(id));
+  //     Promise.all(queue).then((values) => {
+  //       console.log(values);
+  //       return values.data;
+  //     });
+  //   }
+  // }
+  // const names = [];
+  // const MONKEEZ = getObjkts([
+  //   290697, 290884, 291061, 291147, 291195, 293472, 293684, 298212,301025
+  // ]);
 
-  for (let i = 0; i < MONKEEZ.length; i++) {
-    console.log(MONKEEZ[i].data);
-    names[i] = MONKEEZ[i];
-  }
+  // for (let i = 0; i < MONKEEZ.length; i++) {
+  //   console.log(MONKEEZ[i].data);
+  //   names[i] = MONKEEZ[i];
+  // }
 
   return (
     <div>
@@ -67,7 +66,7 @@ export default function App() {
         </a>
       </div>
       <ModelCard
-        itemName={names ? "Crypto-Monk-Eez #1" : "Loading..."}
+        itemName={"Crypto-Monk-Eez #1"}
         nftAddress="https://ipfs.io/ipfs/bafybeicodrdwmgv74lzqvm7pg3byz2ml5dga4if6pztgsv56fmkjdlxcbi"
       />
       <SoldLink link="https://www.hicetnunc.xyz/objkt/290697" />
