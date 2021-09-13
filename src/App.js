@@ -107,11 +107,6 @@ export default function App() {
         nftAddress="https://ipfs.io/ipfs/bafybeifszy6l5mzmq6sdoeeopephtwbhiiuewsh4uccjmajxdur3kss44i"
       />
       <PurchaseLink link="https://www.hicetnunc.xyz/objkt/298212" />
-      <ModelCard
-        itemName="Cyrpto-Monk-Eez #9 - Suzie"
-        nftAddress="https://ipfs.io/ipfs/bafybeieqa5twxnkgsii2mlo46wt6fblazvpub7phno4qikne2ciayg26cy"
-      />
-      <PurchaseLink link="https://www.hicetnunc.xyz/objkt/301025" />
       <br></br>
       <footer> copywright {new Date().getFullYear()}</footer>
     </div>
