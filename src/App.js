@@ -113,7 +113,7 @@ export default function App() {
       />
       <PurchaseLink link="https://www.hicetnunc.xyz/objkt/301025" />
       <br></br>
-      <footer> copywright {new Date().getFullYear()}</footer>
+      <footer> copyright {new Date().getFullYear()}</footer>
     </div>
   );
 }
