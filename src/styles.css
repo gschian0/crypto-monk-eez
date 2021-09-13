@@ -66,12 +66,15 @@ body {
 h1 {
   padding: 10px;
   text-align: center;
-  font-size: 8vw;
+  font-size: 9vw;
   user-select: none;
   font-family: "Press Start 2P", cursive;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 2px;
 
   -webkit-text-stroke-color: #715b64;
+}
+h1:hover {
+  transform: perspective(1px) rotateX(180deg);
 }
 h2 {
   font-family: "Open Sans", sans-serif;
@@ -79,7 +82,8 @@ h2 {
 
   -webkit-text-stroke-width: 1px;
   color: #715b64;
-  -webkit-text-stroke-color: black;
+
+  -webkit-text-stroke-color: #d3bdb0;
 }
 
 a {
@@ -132,7 +136,15 @@ h3 {
   position: relative;
   margin: auto;
 }
-
+h6 {
+  text-align: center;
+  font-size: 3vh;
+  color: black;
+  height: 50px;
+}
+h6:hover {
+  color: pink;
+}
 model-viewer {
   border: 0;
   text-decoration: none;
@@ -170,4 +182,28 @@ a:hover {
   -webkit-text-stroke-width: 1px;
 
   -webkit-text-stroke-color: #715b64;
+}
+
+.tab-list {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  height: 100%;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+footer {
+  text-align: center;
+  color: black;
+  font-family: "Press Start 2P", cursive;
 }

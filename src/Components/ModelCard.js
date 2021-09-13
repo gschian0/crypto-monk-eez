@@ -13,7 +13,7 @@ const ModelCard = (props) => {
         camera-controls="true"
         ar-status="not-presenting"
       >
-        <button slot="ar-button" class="styles_arButton__lU3m5">
+        <button slot="ar-button" className="styles_arButton__lU3m5">
           AR
         </button>
         <h2 className="center-h2">{props.itemName}</h2>
